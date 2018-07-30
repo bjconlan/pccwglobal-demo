@@ -298,8 +298,8 @@ using java 9 & 10. (These can be overcome using command line flags and the
 introduction of the appropriate maven dependencies but decided it keep it simple)
 
 As the requirements of the task are quite small I've implemented the application
-using a a fairly familiar package structure and focused on brevity and comments
-over completeness (that being the omission of explicit request/response payloads,
+using a familiar package structure and focused on brevity and comments over
+completeness (that being the omission of explicit request/response payloads,
 domain/model conversion & business logic layers) making the application easier to
 read for the evaluator. (Naturally in a larger application design things would be
 scoped as appropriate).
@@ -347,6 +347,8 @@ to the url. The following metric endpoints are provided:
 NOTE that no caching has been implemented (unless time permits) through e-tagging
      or otherwise (jsr-107) this would perhaps be the next step in optimizing the
      performance of the application. (along with the inclusion of JMeter tests)
+
+## JUnit Report
 
 The JUnit reports submitted with this assessment were generated from the maven
 surefire plugin and can be re-executed simply by performing executing the `mvnw
