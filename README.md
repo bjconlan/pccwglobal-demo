@@ -269,9 +269,8 @@ documentation:
 ```
 
 *Note* the swagger definition document was edited from the original to correct
-schema outlined when running the code though the [Swagger editor]
-(http://editor.swagger.io). This also includes the remove of the 'id' parameter
-on the GET:/users url.
+schema errors outlined when running the code though the [Swagger editor](http://editor.swagger.io).
+This also includes the removal of the 'id' parameter on the GET:/users endpoint.
 
 > Key requirements
   1. Package management: [Maven](https://maven.apache.org/)
@@ -292,7 +291,7 @@ test the API server completed in Task 1
 
 # Development Execution
 
-For implementation I've decided to use the most current stable versions of spring
+For implementation I've decided to use the most current stable version of spring
 boot (2.0.3) but use the older java version (8/1.8) due to minor issues regarding
 classpath loading (java.se.ee) and 'Illegal reflective access' warnings when
 using java 9 & 10. (These can be overcome using command line flags and the
@@ -335,10 +334,9 @@ Metrics actuator web endpoints have been enabled allowing the user to view
 micrometer based stats for particular routes/requests. Details of how this works
 can be found in the [Spring boot reference](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html#production-ready-metrics-spring-mvc)
 
-After the endpoint has been hit it should be visible in the [metrics listing]
-(http://localhost:8080/actuator/metrics/) where you can look at the specific
-request details by simply appending the name to the url. The following metric
-endpoints are provided:
+After the endpoint has been hit it should be visible in the [metrics listing](http://localhost:8080/actuator/metrics/)
+where you can look at the specific request details by simply appending the name
+to the url. The following metric endpoints are provided:
 
 - GET: /users = http://localhost:8080/actuator/metrics/web.rest.user.findAll
 - GET: /users/{id} = http://localhost:8080/actuator/metrics/web.rest.user.findById
