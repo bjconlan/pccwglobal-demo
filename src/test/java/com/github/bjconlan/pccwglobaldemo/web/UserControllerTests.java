@@ -83,7 +83,6 @@ public class UserControllerTests {
 						.collect(Collectors.toList()));
 
 		this.mockMvc.perform(get("/users")
-				.contentType(MediaType.APPLICATION_JSON)
 				.accept(MediaType.APPLICATION_JSON_UTF8))
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$", hasSize(users.size())))
